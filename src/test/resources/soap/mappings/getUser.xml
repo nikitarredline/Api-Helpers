@@ -1,0 +1,7 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <getUserRequest>
+            <id>1</id>
+        </getUserRequest>
+    </soap:Body>
+</soap:Envelope>

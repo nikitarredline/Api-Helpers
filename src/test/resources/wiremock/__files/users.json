@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Test user",
+    "cource": "QA",
+    "email": "test@test.test",
+    "age": 23
+  },
+  {
+    "name": "Alex Ivanov",
+    "cource": "Java",
+    "email": "alex@test.test",
+    "age": 28
+  }
+]

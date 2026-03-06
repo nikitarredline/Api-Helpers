@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/cource/get/all"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "courses.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
