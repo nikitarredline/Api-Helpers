@@ -1,16 +1,27 @@
-package tests;
+package tests.stub;
 
-import api.UserApi;
 import org.junit.jupiter.api.Test;
 import stub.BaseApiTest;
 
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class UsersApiTest extends BaseApiTest {
+public class UsersStubTest extends BaseApiTest {
 
     @Test
-    void shouldReturnUsers() {
-        UserApi.getAllUsers()
+    void shouldReturnUserScore() {
+        given()
+                .get("/user/get/1")
+                .then()
+                .statusCode(200)
+                .body("name", equalTo("Test user"))
+                .body("score", equalTo(78));
+    }
+
+    @Test
+    void shouldReturnUsersList() {
+        given()
+                .get("/user/get/all")
                 .then()
                 .statusCode(200)
                 .body("[0].name", equalTo("Test user"))
@@ -21,14 +32,5 @@ public class UsersApiTest extends BaseApiTest {
                 .body("[1].cource", equalTo("Java"))
                 .body("[1].email", equalTo("alex@test.test"))
                 .body("[1].age", equalTo(28));
-    }
-
-    @Test
-    void shouldReturnUserScore() {
-        UserApi.getUserScore(1)
-                .then()
-                .statusCode(200)
-                .body("name", equalTo("Test user"))
-                .body("score", equalTo(78));
     }
 }

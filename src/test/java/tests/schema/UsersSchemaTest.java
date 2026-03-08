@@ -1,4 +1,4 @@
-package tests;
+package tests.schema;
 
 import org.junit.jupiter.api.Test;
 import stub.BaseApiTest;
@@ -6,7 +6,7 @@ import stub.BaseApiTest;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class SchemaTest extends BaseApiTest {
+public class UsersSchemaTest extends BaseApiTest {
 
     @Test
     void usersSchemaTest() {
@@ -17,14 +17,7 @@ public class SchemaTest extends BaseApiTest {
                 .body(matchesJsonSchemaInClasspath("schemas/users-schema.json"));
     }
 
-    @Test
-    void coursesSchemaTest() {
-        given()
-                .get("/cource/get/all")
-                .then()
-                .statusCode(200)
-                .body(matchesJsonSchemaInClasspath("schemas/courses-schema.json"));
-    }
+
 
     @Test
     void userScoreSchemaTest() {

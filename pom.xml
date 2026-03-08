@@ -22,7 +22,7 @@
 
     <dependencies>
 
-        <!-- JUnit -->
+        <!-- JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -43,25 +43,32 @@
             <version>${restassured.version}</version>
         </dependency>
 
-        <!-- JSON schema validation -->
+        <!-- JSON Schema Validation -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
             <version>${restassured.version}</version>
         </dependency>
 
-        <!-- SOAP helper -->
+        <!-- XML / SOAP support -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>xml-path</artifactId>
             <version>${restassured.version}</version>
         </dependency>
 
-        <!-- Selenium -->
+        <!-- Selenium (для Selenoid) -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
+        </dependency>
+
+        <!-- WebDriverManager (чтобы не качать драйверы вручную) -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.7.0</version>
         </dependency>
 
         <!-- Cucumber -->
@@ -77,11 +84,32 @@
             <version>${cucumber.version}</version>
         </dependency>
 
+        <!-- SQL helper (JDBC) -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.2.224</version>
+        </dependency>
+
+        <!-- MQ helper (RabbitMQ) -->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.20.0</version>
+        </dependency>
+
         <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.30</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

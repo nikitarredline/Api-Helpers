@@ -1,17 +1,16 @@
-package tests;
+package tests.api;
 
+import api.CourseApi;
 import org.junit.jupiter.api.Test;
 import stub.BaseApiTest;
 
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class GetCoursesTest extends BaseApiTest {
+public class CoursesApiTest extends BaseApiTest {
 
     @Test
-    void shouldReturnCoursesList() {
-        given()
-                .get("/cource/get/all")
+    void shouldReturnCourses() {
+        CourseApi.getAllCourses()
                 .then()
                 .statusCode(200)
                 .body("[0].name", equalTo("QA java"))
