@@ -1,6 +1,6 @@
 package tests.soap;
 
-import helpers.soaphelper.SoapHelper;
+import helpers.soap.SoapHelper;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import stub.BaseApiTest;

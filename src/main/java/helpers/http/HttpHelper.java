@@ -1,4 +1,4 @@
-package helpers.httphelper;
+package helpers.http;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

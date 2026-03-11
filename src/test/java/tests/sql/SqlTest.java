@@ -1,6 +1,6 @@
 package tests.sql;
 
-import helpers.sqlhelper.SqlHelper;
+import helpers.sql.SqlHelper;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

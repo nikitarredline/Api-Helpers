@@ -1,6 +1,6 @@
 package api;
 
-import helpers.httphelper.HttpHelper;
+import helpers.http.HttpHelper;
 import io.restassured.response.Response;
 
 public class CourseApi {

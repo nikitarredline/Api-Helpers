@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+</head>
+<body>
+<h1>Users List</h1>
+<table id="users" border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+    </tr>
+</table>
+
+<script>
+    fetch('http://localhost:8080/user/get/all')
+        .then(res => res.json())
+        .then(users => {
+            const table = document.getElementById('users');
+            users.forEach(u => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${u.name}</td><td>${u.email}</td><td>${u.age}</td>`;
+                table.appendChild(row);
+            });
+        })
+        .catch(err => console.error('Fetch error:', err));
+</script>
+</body>
+</html>

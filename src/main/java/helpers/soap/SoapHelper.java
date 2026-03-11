@@ -1,4 +1,4 @@
-package helpers.soaphelper;
+package helpers.soap;
 
 import io.restassured.response.Response;
 

@@ -1,4 +1,4 @@
-package helpers.soaphelper;
+package helpers.soap;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
