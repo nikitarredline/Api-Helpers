@@ -10,7 +10,9 @@ docker run -d --name selenoid -p 4444:4444 aerokube/selenoid:latest-release
 - Тесты предполагают доступ к этим портам.
 
 Порядок запуска тестов
+
 Сначала поднять контейнеры, затем запустить тесты через IDE или mvn test.
 
 Примечания по данным
+
 Selenoid ожидает 120 версию Chrome
