@@ -11,7 +11,6 @@ public class SelenoidTest {
 
     @Test
     void testGoogle() throws Exception {
-
         ChromeOptions options = new ChromeOptions();
         options.setCapability("browserName", "chrome");
 
